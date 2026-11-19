@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "construction-schedule-gantt"
+version = "0.1.0"
+description = "Gantt chart (text and SVG) from a CSV of construction tasks"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+[project.scripts]
+construction-schedule-gantt = "gantt.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
